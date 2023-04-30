@@ -3,11 +3,15 @@ package com.engeto.eshop.repository;
 import com.engeto.eshop.model.Product;
 import com.engeto.eshop.data.Products;
 import com.engeto.eshop.service.EShopException;
-
 import com.engeto.eshop.settings.Settings;
+
 import org.springframework.stereotype.Repository;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 

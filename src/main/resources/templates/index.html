@@ -12,23 +12,7 @@
   <p>
     <a class="btn menu" th:href="@{/populate-table}">Populate</a>
     <a class="btn menu" th:href="@{/add-new-form}">Add</a>
-<!--    <div th:text="${maxId}">-->
-<!--    <a class="btn menu" th:href="@{/get-max-id}">-->
-<!--      <span th:text="${maxId}"></span>-->
-    <a class="btn menu" th:href="@{/switch-is-all-out-of-sale-visible}">Hide/Show out of sale
-      <!--th:text="${visible} ? 'Hide' : 'Show'">-->
-<!--      <span th:value="${visible}"></span>-->
-<!--      <span th:text="${visible} == true ? 'Hide' : 'Show'"></span>-->
-<!--      <span th:text="${visible.isAllOutOfSaleVisible} ? 'Hide out of sale' : 'Show out of sale'"></span>-->
-<!--      <span th:if="${visible == true}">Ok</span>-->
-<!--      <span th:unless="${visible == false}">No</span>-->
-<!--      <span th:if="${#bools.isTrue(visible)}">Ok</span>-->
-<!--      <span th:unless="${#bools.isFalse(visible)}">No</span>-->
-<!--      <span th:if="${visible == true}">Hide out of sale</span>-->
-<!--      <span th:unless="${visible == false}">Show out of sale</span>-->
-    </a>
-<!--    </div>-->
-<!--  <div th:unless="${maxId > 0}">ok</div>-->
+    <a class="btn menu" th:href="@{/switch-is-all-out-of-sale-visible}">Hide/Show out of sale</a>
     <a class="btn menu" th:href="@{/set-all-out-of-sale-deleted}">Delete out of sale</a>
     <a class="btn menu" th:href="@{/set-all-deleted}">Delete all</a>
   </p>

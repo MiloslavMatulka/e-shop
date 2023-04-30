@@ -104,11 +104,9 @@ public class ProductController {
 	}
 
 	@GetMapping("/switch-is-all-out-of-sale-visible")
-	public String switchAllOutOfSaleVisibility(/*Model model*/)
+	public String switchAllOutOfSaleVisibility()
 			throws SQLException, EShopException {
 		boolean isVisible = productService.switchIsAllOutOfSaleVisible();
-//		model.addAttribute("visible",
-//				isVisible);
 		logger.info("Switching visibility of all out of sale products, "
 				+ "currently visible " + isVisible);
 		return "redirect:/";

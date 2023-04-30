@@ -56,9 +56,6 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public void populateTable() throws SQLException, EShopException {
-//		if (!Product.getIsAllOutOfSaleVisible()) {
-//			switchIsAllOutOfSaleVisible();
-//		}
 		productRepo.setAllOutOfSaleVisible();
 		productRepo.populateTable();
 	}
@@ -70,11 +67,6 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public void save(Product product) throws SQLException {
-//		if (product.getIsForSale() || Product.getIsAllOutOfSaleVisible()) {
-//			product.setIsVisible(true);
-//		} else {
-//			product.setIsVisible(false);
-//		}
 		productRepo.setAllOutOfSaleVisible();
 		productRepo.save(product);
 	}
