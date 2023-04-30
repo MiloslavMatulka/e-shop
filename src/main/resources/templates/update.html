@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <title>E-Shop</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+<body>
+  <div align="center">
+    <h1>Product Update</h1>
+
+    <form action="#" th:action="@{/update-product}" th:object="${product}" method="POST">
+      <p><input type="hidden" th:field="*{id}" /></p>
+      <p>Part No.<br>
+        <input class="uneditable" type="text" th:field="*{partNo}" placeholder=th:field="*{partNo}" readonly></p>
+      <p>Name<br>
+        <input class="uneditable" type="text" th:field="*{name}" placeholder=th:field="*{name}" readonly></p>
+      <p>Description<br>
+        <input class="uneditable" type="text" th:field="*{description}" placeholder=th:field="*{description}" readonly></p>
+      <p>For Sale<br>
+        <input class="uneditable" type="text" th:field="*{isForSale}" placeholder=th:field="*{isForSale}" readonly></p>
+      <p>Price<br>
+        <input type="text" th:field="*{price}" placeholder=th:field="*{price}"></p>
+      <p><input type="hidden" th:field="*{isVisible}" /></p>
+      <p><input type="hidden" th:field="*{isDeleted}" /></p>
+
+      <p><button class="btn upd" type="submit">Update</button></p>
+    </form>
+
+    <hr>
+    <a th:href="@{/}">Home</a>
+  </div>
+</body>
+</html>

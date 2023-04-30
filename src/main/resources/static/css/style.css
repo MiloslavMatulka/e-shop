@@ -1,0 +1,68 @@
+table, th, td {
+    padding: .5em;
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+th {
+    background-color:whitesmoke;
+}
+
+input.uneditable {
+    background-color: lightgrey;
+}
+
+a.btn, button.btn {
+    color: inherit;
+    text-decoration: none;
+    margin: .4em .2em;
+    padding: .5em;
+    border-radius: .2em;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+button {
+    padding: .5em;
+}
+
+a.menu {
+    background-color: dimgray;
+    color: white;
+}
+
+a.menu:hover {
+    background-color: lightgray;
+    color: inherit;
+}
+
+button.new {
+    background-color: palegreen;
+}
+
+button.new:hover {
+    background-color: mediumseagreen;
+}
+
+button.upd {
+    background-color: khaki;
+}
+
+a.upd {
+    background-color: khaki;
+    padding: .2em;
+}
+
+a.upd:hover, button.upd:hover {
+    background-color: darkkhaki;
+}
+
+a.del {
+    background-color: lightsalmon;
+    padding: .2em;
+}
+
+a.del:hover {
+    background-color: tomato;
+}

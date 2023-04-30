@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "cf6a0744-209b-4ae6-a10b-eb44ed54c5c0",
+		"name": "products-view",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26404449"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/add-new-form",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/add-new-form",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"add-new-form"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/populate-table",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/populate-table",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"populate-table"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/save-product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/save-product?partNo=989&name=Docking station&description=USB-C&isForSale=true&price=7800",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"save-product"
+					],
+					"query": [
+						{
+							"key": "partNo",
+							"value": "989"
+						},
+						{
+							"key": "name",
+							"value": "Docking station"
+						},
+						{
+							"key": "description",
+							"value": "USB-C"
+						},
+						{
+							"key": "isForSale",
+							"value": "true"
+						},
+						{
+							"key": "price",
+							"value": "7800"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/set-all-deleted",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/set-all-deleted",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"set-all-deleted"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/set-all-out-of-sale-deleted",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/set-all-out-of-sale-deleted",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"set-all-out-of-sale-deleted"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/set-by-id-deleted/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/set-by-id-deleted/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"set-by-id-deleted",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/switch-is-all-out-of-sale-visible",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/switch-is-all-out-of-sale-visible",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"switch-is-all-out-of-sale-visible"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/update-product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/update-product?id=1&partNo=245&name=Computer&description=Laptop&isForSale=true&price=7500",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"update-product"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "partNo",
+							"value": "245"
+						},
+						{
+							"key": "name",
+							"value": "Computer"
+						},
+						{
+							"key": "description",
+							"value": "Laptop"
+						},
+						{
+							"key": "isForSale",
+							"value": "true"
+						},
+						{
+							"key": "price",
+							"value": "7500"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/update-form/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/update-form/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"update-form",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

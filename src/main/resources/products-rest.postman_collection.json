@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "0bc3e3d4-054f-4e8d-a5c6-494df571e807",
+		"name": "products-rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26404449"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/delete-all-rest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/delete-all-rest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delete-all-rest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/get-all-rest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/get-all-rest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"get-all-rest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/get-by-id-rest/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/get-by-id-rest/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"get-by-id-rest",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/get-max-id-rest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/get-max-id-rest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"get-max-id-rest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/reset-ids-rest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reset-ids-rest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reset-ids-rest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/set-all-out-of-sale-deleted-rest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/set-all-out-of-sale-deleted-rest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"set-all-out-of-sale-deleted-rest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/save-rest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/save-rest?partNo=567&name=Scanner&description=Format A4&isForSale=true&price=4300",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"save-rest"
+					],
+					"query": [
+						{
+							"key": "partNo",
+							"value": "567"
+						},
+						{
+							"key": "name",
+							"value": "Scanner"
+						},
+						{
+							"key": "description",
+							"value": "Format A4"
+						},
+						{
+							"key": "isForSale",
+							"value": "true"
+						},
+						{
+							"key": "price",
+							"value": "4300"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/update-rest/{id}/{price}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/update-rest/1/7000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"update-rest",
+						"1",
+						"7000"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
