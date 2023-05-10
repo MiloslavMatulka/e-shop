@@ -10,12 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
 import java.time.LocalDateTime;
@@ -64,7 +59,7 @@ public class ProductController {
 	 *
 	 * @return Home page
 	 */
-	@GetMapping("/populate-table")
+	@PostMapping("/populate-table")
 	public String populateTable() throws SQLException, EShopException {
 		logger.info("Populating table of products with test data");
 		productService.populateTable();
@@ -79,7 +74,7 @@ public class ProductController {
 		return "redirect:/";
 	}
 
-	@GetMapping("/set-all-deleted")
+	@PatchMapping("/set-all-deleted")
 	public String setAllDeleted() throws SQLException {
 		long numberOfSetDeleted = productService.setAllDeleted();
 		logger.info("Setting all products to deleted state, "
@@ -87,7 +82,7 @@ public class ProductController {
 		return "redirect:/";
 	}
 
-	@GetMapping("/set-all-out-of-sale-deleted")
+	@PatchMapping("/set-all-out-of-sale-deleted")
 	public String setAllOutOfSaleDeleted() throws SQLException {
 		long numberOfSetDeleted = productService.setAllOutOfSaleDeleted();
 		logger.info("Setting all out of sale products to deleted state, "
@@ -95,7 +90,7 @@ public class ProductController {
 		return "redirect:/";
 	}
 
-	@GetMapping("/set-by-id-deleted/{id}")
+	@PatchMapping("/set-by-id-deleted/{id}")
 	public String setByIdDeleted(@PathVariable(value = "id") long id)
 			throws SQLException {
 		logger.info("Setting product ID " + id + " to deleted state");
@@ -103,7 +98,7 @@ public class ProductController {
 		return "redirect:/";
 	}
 
-	@GetMapping("/switch-is-all-out-of-sale-visible")
+	@PatchMapping("/switch-is-all-out-of-sale-visible")
 	public String switchAllOutOfSaleVisibility()
 			throws SQLException, EShopException {
 		boolean isVisible = productService.switchIsAllOutOfSaleVisible();
@@ -112,7 +107,7 @@ public class ProductController {
 		return "redirect:/";
 	}
 
-	@PostMapping("/update-product")
+	@PatchMapping("/update-product")
 	public String updateProduct(@ModelAttribute("product") Product product)
 			throws SQLException {
 		logger.info("Updating with price " + product.getPrice() + ", "

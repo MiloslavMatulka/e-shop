@@ -8,12 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 import java.sql.SQLException;
@@ -25,14 +20,15 @@ import java.util.List;
  * Postman.
  */
 @RestController
-public class ProductRestController {
+@RequestMapping("/test")
+public class ProductTestController {
 
     @Value("${com.engeto.author}")
     private String nameOfAuthor;
     private final ProductService productService;
-    Logger logger = LoggerFactory.getLogger(ProductRestController.class);
+    Logger logger = LoggerFactory.getLogger(ProductTestController.class);
 
-    public ProductRestController(ProductService productServiceImpl) {
+    public ProductTestController(ProductService productServiceImpl) {
         this.productService = productServiceImpl;
     }
 
@@ -41,7 +37,7 @@ public class ProductRestController {
      *
      * @return Number of deleted products
      */
-    @GetMapping("/delete-all-rest")
+    @DeleteMapping("/delete-all")
     public long deleteAll_Rest() throws SQLException {
         long numberOfDeleted = productService.deleteAll();
         logger.info("REST, deleting all products, their count "
@@ -49,13 +45,13 @@ public class ProductRestController {
         return numberOfDeleted;
     }
 
-    @GetMapping("/get-all-rest")
+    @GetMapping("/get-all")
     public List<Product> getAll_Rest() throws SQLException {
         logger.info("REST, getting all products");
         return productService.getAll();
     }
 
-    @GetMapping("/get-by-id-rest/{id}")
+    @GetMapping("/get-by-id/{id}")
     public Product getById_Rest(@PathVariable(value = "id") long id)
             throws SQLException, EShopException {
         Product product = productService.getById(id);
@@ -63,7 +59,7 @@ public class ProductRestController {
         return product;
     }
 
-    @GetMapping("/get-max-id-rest")
+    @GetMapping("/get-max-id")
     public long getMaxId_Rest() throws SQLException {
         long maxId = productService.getMaxId();
         logger.info("REST, getting max ID = " + maxId);
@@ -73,7 +69,7 @@ public class ProductRestController {
     /**
      * Restarts IDs. Requires ALTER user permissions.
      */
-    @GetMapping("/reset-ids-rest")
+    @DeleteMapping("/reset-ids")
     public String resetIdsRest() throws SQLException {
         logger.info("REST, resetting IDs in database");
         productService.resetIds();
@@ -86,7 +82,7 @@ public class ProductRestController {
      *
      * @return Number of products set to deleted state
      */
-    @GetMapping("/set-all-out-of-sale-deleted-rest")
+    @PatchMapping("/set-all-out-of-sale-deleted")
     public long setAllOutOfSaleDeleted_Rest() throws SQLException {
         long numberOfSetDeleted = productService.setAllOutOfSaleDeleted();
         logger.info("REST, setting all out of sale products to deleted state, "
@@ -94,14 +90,14 @@ public class ProductRestController {
         return numberOfSetDeleted;
     }
 
-    @PostMapping("/save-rest")
+    @PostMapping("/save")
     public Product save_Rest(Product product) throws SQLException {
         productService.save(product);
         logger.info("REST, saving " + product.toString());
         return product;
     }
 
-    @PostMapping("/update-rest/{id}/{price}")
+    @PatchMapping("/update/{id}/{price}")
     public Product update_Rest(@PathVariable(value = "id") long id,
                              @PathVariable(value = "price") BigDecimal price)
             throws SQLException, EShopException {

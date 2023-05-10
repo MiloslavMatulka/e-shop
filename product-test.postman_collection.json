@@ -1,63 +1,66 @@
 {
 	"info": {
 		"_postman_id": "0bc3e3d4-054f-4e8d-a5c6-494df571e807",
-		"name": "products-rest",
+		"name": "product-test",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26404449"
 	},
 	"item": [
 		{
-			"name": "http://localhost:8080/delete-all-rest",
+			"name": "http://localhost:8080/test/delete-all",
 			"request": {
-				"method": "GET",
+				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/delete-all-rest",
+					"raw": "http://localhost:8080/test/delete-all",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"delete-all-rest"
+						"test",
+						"delete-all"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/get-all-rest",
+			"name": "http://localhost:8080/test/get-all",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/get-all-rest",
+					"raw": "http://localhost:8080/test/get-all",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"get-all-rest"
+						"test",
+						"get-all"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/get-by-id-rest/{id}",
+			"name": "http://localhost:8080/test/get-by-id/{id}",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/get-by-id-rest/1",
+					"raw": "http://localhost:8080/test/get-by-id/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"get-by-id-rest",
+						"test",
+						"get-by-id",
 						"1"
 					]
 				}
@@ -65,76 +68,80 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/get-max-id-rest",
+			"name": "http://localhost:8080/test/get-max-id",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/get-max-id-rest",
+					"raw": "http://localhost:8080/test/get-max-id",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"get-max-id-rest"
+						"test",
+						"get-max-id"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/reset-ids-rest",
+			"name": "http://localhost:8080/test/reset-ids",
 			"request": {
-				"method": "GET",
+				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/reset-ids-rest",
+					"raw": "http://localhost:8080/test/reset-ids",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"reset-ids-rest"
+						"test",
+						"reset-ids"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/set-all-out-of-sale-deleted-rest",
+			"name": "http://localhost:8080/test/set-all-out-of-sale-deleted",
 			"request": {
-				"method": "GET",
+				"method": "PATCH",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/set-all-out-of-sale-deleted-rest",
+					"raw": "http://localhost:8080/test/set-all-out-of-sale-deleted",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"set-all-out-of-sale-deleted-rest"
+						"test",
+						"set-all-out-of-sale-deleted"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/save-rest",
+			"name": "http://localhost:8080/test/save",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/save-rest?partNo=567&name=Scanner&description=Format A4&isForSale=true&price=4300",
+					"raw": "http://localhost:8080/test/save?partNo=567&name=Scanner&description=Format A4&isForSale=true&price=4300",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"save-rest"
+						"test",
+						"save"
 					],
 					"query": [
 						{
@@ -163,19 +170,20 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/update-rest/{id}/{price}",
+			"name": "http://localhost:8080/test/update/{id}/{price}",
 			"request": {
-				"method": "POST",
+				"method": "PATCH",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/update-rest/1/7000",
+					"raw": "http://localhost:8080/test/update/1/7000",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"update-rest",
+						"test",
+						"update",
 						"1",
 						"7000"
 					]
