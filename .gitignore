@@ -1,11 +1,3 @@
-# User
-**/*.iml
-**/.idea/**
-**/out/**
-**/target/**
-
-###############################################################################
-
 ### IntelliJ IDEA ###
 # out/
 !**/src/main/**/out/
@@ -207,3 +199,13 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,intellij,java
+
+###############################################################################
+
+# User
+**/*.iml
+**/.idea/**
+!maven-wrapper.jar
+**/out/**
+**/target/**
+HELP.md

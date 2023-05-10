@@ -1,7 +1,6 @@
-package com.engeto.eshop.data;
+package com.engeto.eshop.service;
 
 import com.engeto.eshop.model.Product;
-import com.engeto.eshop.service.EShopException;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -11,10 +10,10 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-public class Products {
+public class ImportProductsService {
     private List<Product> products = new ArrayList<>();
 
-    public Products() {
+    public ImportProductsService() {
     }
 
 

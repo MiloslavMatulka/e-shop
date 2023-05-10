@@ -1,8 +1,8 @@
 package com.engeto.eshop.repository;
 
 import com.engeto.eshop.model.Product;
-import com.engeto.eshop.data.Products;
 import com.engeto.eshop.service.EShopException;
+import com.engeto.eshop.service.ImportProductsService;
 import com.engeto.eshop.settings.Settings;
 
 import org.springframework.stereotype.Repository;
@@ -86,10 +86,12 @@ public class ProductRepository {
 	public void populateTable()
 			throws SQLException, EShopException {
 		// Load testing data
-		Products products = new Products();
-        products.setProducts(Products.importProducts(Settings.getFile()));
+		ImportProductsService importProductsService =
+				new ImportProductsService();
+        importProductsService.setProducts(ImportProductsService
+				.importProducts(Settings.getFile()));
 
-		for (Product product : products.getProducts()) {
+		for (Product product : importProductsService.getProducts()) {
 			statement.executeUpdate("INSERT INTO " + table
 					+ " (part_no, name, description, is_for_sale, price, "
 					+ "is_visible, is_deleted) VALUES ("
