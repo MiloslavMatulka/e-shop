@@ -59,7 +59,7 @@ public class ProductController {
 	 *
 	 * @return Home page
 	 */
-	@PostMapping("/populate-table")
+	@GetMapping("/populate-table")
 	public String populateTable() throws SQLException, EShopException {
 		logger.info("Populating table of products with test data");
 		productService.populateTable();
@@ -74,7 +74,7 @@ public class ProductController {
 		return "redirect:/";
 	}
 
-	@PatchMapping("/set-all-deleted")
+	@GetMapping("/set-all-deleted")
 	public String setAllDeleted() throws SQLException {
 		long numberOfSetDeleted = productService.setAllDeleted();
 		logger.info("Setting all products to deleted state, "
@@ -82,7 +82,7 @@ public class ProductController {
 		return "redirect:/";
 	}
 
-	@PatchMapping("/set-all-out-of-sale-deleted")
+	@GetMapping("/set-all-out-of-sale-deleted")
 	public String setAllOutOfSaleDeleted() throws SQLException {
 		long numberOfSetDeleted = productService.setAllOutOfSaleDeleted();
 		logger.info("Setting all out of sale products to deleted state, "
@@ -90,7 +90,7 @@ public class ProductController {
 		return "redirect:/";
 	}
 
-	@PatchMapping("/set-by-id-deleted/{id}")
+	@GetMapping("/set-by-id-deleted/{id}")
 	public String setByIdDeleted(@PathVariable(value = "id") long id)
 			throws SQLException {
 		logger.info("Setting product ID " + id + " to deleted state");
@@ -98,7 +98,7 @@ public class ProductController {
 		return "redirect:/";
 	}
 
-	@PatchMapping("/switch-is-all-out-of-sale-visible")
+	@GetMapping("/switch-is-all-out-of-sale-visible")
 	public String switchAllOutOfSaleVisibility()
 			throws SQLException, EShopException {
 		boolean isVisible = productService.switchIsAllOutOfSaleVisible();
@@ -107,7 +107,7 @@ public class ProductController {
 		return "redirect:/";
 	}
 
-	@PatchMapping("/update-product")
+	@PostMapping("/update-product")
 	public String updateProduct(@ModelAttribute("product") Product product)
 			throws SQLException {
 		logger.info("Updating with price " + product.getPrice() + ", "

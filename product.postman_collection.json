@@ -44,7 +44,7 @@
 		{
 			"name": "http://localhost:8080/populate-table",
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [],
 				"url": {
 					"raw": "http://localhost:8080/populate-table",
@@ -104,7 +104,7 @@
 		{
 			"name": "http://localhost:8080/set-all-deleted",
 			"request": {
-				"method": "PATCH",
+				"method": "GET",
 				"header": [],
 				"url": {
 					"raw": "http://localhost:8080/set-all-deleted",
@@ -123,7 +123,7 @@
 		{
 			"name": "http://localhost:8080/set-all-out-of-sale-deleted",
 			"request": {
-				"method": "PATCH",
+				"method": "GET",
 				"header": [],
 				"url": {
 					"raw": "http://localhost:8080/set-all-out-of-sale-deleted",
@@ -142,7 +142,7 @@
 		{
 			"name": "http://localhost:8080/set-by-id-deleted/{id}",
 			"request": {
-				"method": "PATCH",
+				"method": "GET",
 				"header": [],
 				"url": {
 					"raw": "http://localhost:8080/set-by-id-deleted/1",
@@ -162,7 +162,7 @@
 		{
 			"name": "http://localhost:8080/switch-is-all-out-of-sale-visible",
 			"request": {
-				"method": "PATCH",
+				"method": "GET",
 				"header": [],
 				"url": {
 					"raw": "http://localhost:8080/switch-is-all-out-of-sale-visible",
@@ -181,7 +181,7 @@
 		{
 			"name": "http://localhost:8080/update-product",
 			"request": {
-				"method": "PATCH",
+				"method": "POST",
 				"header": [],
 				"url": {
 					"raw": "http://localhost:8080/update-product?id=1&partNo=245&name=Computer&description=Laptop&isForSale=true&price=7500",

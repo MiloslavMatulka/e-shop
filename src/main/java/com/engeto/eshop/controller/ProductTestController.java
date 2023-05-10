@@ -40,14 +40,14 @@ public class ProductTestController {
     @DeleteMapping("/delete-all")
     public long deleteAll_Rest() throws SQLException {
         long numberOfDeleted = productService.deleteAll();
-        logger.info("REST, deleting all products, their count "
+        logger.info("Test, deleting all products, their count "
                 + numberOfDeleted);
         return numberOfDeleted;
     }
 
     @GetMapping("/get-all")
     public List<Product> getAll_Rest() throws SQLException {
-        logger.info("REST, getting all products");
+        logger.info("Test, getting all products");
         return productService.getAll();
     }
 
@@ -55,14 +55,14 @@ public class ProductTestController {
     public Product getById_Rest(@PathVariable(value = "id") long id)
             throws SQLException, EShopException {
         Product product = productService.getById(id);
-        logger.info("REST, getting " + product.toString());
+        logger.info("Test, getting " + product.toString());
         return product;
     }
 
     @GetMapping("/get-max-id")
     public long getMaxId_Rest() throws SQLException {
         long maxId = productService.getMaxId();
-        logger.info("REST, getting max ID = " + maxId);
+        logger.info("Test, getting max ID = " + maxId);
         return maxId;
     }
 
@@ -71,7 +71,7 @@ public class ProductTestController {
      */
     @DeleteMapping("/reset-ids")
     public String resetIdsRest() throws SQLException {
-        logger.info("REST, resetting IDs in database");
+        logger.info("Test, resetting IDs in database");
         productService.resetIds();
         return "IDs reset in database";
     }
@@ -85,7 +85,7 @@ public class ProductTestController {
     @PatchMapping("/set-all-out-of-sale-deleted")
     public long setAllOutOfSaleDeleted_Rest() throws SQLException {
         long numberOfSetDeleted = productService.setAllOutOfSaleDeleted();
-        logger.info("REST, setting all out of sale products to deleted state, "
+        logger.info("Test, setting all out of sale products to deleted state, "
                 + "their count " + numberOfSetDeleted);
         return numberOfSetDeleted;
     }
@@ -93,7 +93,7 @@ public class ProductTestController {
     @PostMapping("/save")
     public Product save_Rest(Product product) throws SQLException {
         productService.save(product);
-        logger.info("REST, saving " + product.toString());
+        logger.info("Test, saving " + product.toString());
         return product;
     }
 
@@ -102,7 +102,7 @@ public class ProductTestController {
                              @PathVariable(value = "price") BigDecimal price)
             throws SQLException, EShopException {
         Product product = productService.getById(id);
-        logger.info("REST, updating " + product.toString()
+        logger.info("Test, updating " + product.toString()
                 + " with price " + price);
         Product updatedProduct = productService.updatePrice(id, price);
 
