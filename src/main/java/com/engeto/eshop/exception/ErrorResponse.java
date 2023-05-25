@@ -1,24 +1,27 @@
-package com.engeto.eshop.controller;
+package com.engeto.eshop.exception;
 
 import java.time.LocalDateTime;
 
 public class ErrorResponse {
 
+    private LocalDateTime timestamp;
     private String author;
     private String message;
+    private String description;
     private StackTraceElement[] stackTrace;
-    private LocalDateTime timestamp;
 
     public ErrorResponse() {
     }
 
-    public ErrorResponse(String message,
+    public ErrorResponse(LocalDateTime timestamp,
+                         String message,
                          String author,
-                         LocalDateTime timestamp,
+                         String description,
                          StackTraceElement[] stackTrace) {
+        this.timestamp = timestamp;
         this.author = author;
         this.message = message;
-        this.timestamp = timestamp;
+        this.description = description;
         this.stackTrace = stackTrace;
     }
 
@@ -28,6 +31,14 @@ public class ErrorResponse {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getMessage() {

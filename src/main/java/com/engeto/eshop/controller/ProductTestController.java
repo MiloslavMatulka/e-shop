@@ -6,13 +6,10 @@ import com.engeto.eshop.service.ProductService;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 import java.sql.SQLException;
-import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -23,8 +20,6 @@ import java.util.List;
 @RequestMapping("/test")
 public class ProductTestController {
 
-    @Value("${com.engeto.author}")
-    private String nameOfAuthor;
     private final ProductService productService;
     Logger logger = LoggerFactory.getLogger(ProductTestController.class);
 
@@ -110,12 +105,5 @@ public class ProductTestController {
         productService.update(updatedProduct);
 
         return updatedProduct;
-    }
-
-    @ExceptionHandler
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public ErrorResponse handlerException(Exception e) {
-        return new ErrorResponse(e.getLocalizedMessage(),
-                nameOfAuthor, LocalDateTime.now(), e.getStackTrace());
     }
 }

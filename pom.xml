@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.engeto</groupId>
 	<artifactId>e-shop</artifactId>
-	<version>1.3.0</version>
+	<version>1.4.0</version>
 	<name>e-shop</name>
 	<description>Product management web app</description>
 	<properties>

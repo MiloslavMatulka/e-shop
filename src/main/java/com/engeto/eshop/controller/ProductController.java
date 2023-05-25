@@ -6,14 +6,12 @@ import com.engeto.eshop.service.ProductService;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpStatus;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
-import java.time.LocalDateTime;
 
 /**
  * This class provides methods used by a template engine.
@@ -21,8 +19,6 @@ import java.time.LocalDateTime;
 @Controller
 public class ProductController {
 
-	@Value("${com.engeto.author}")
-	private String nameOfAuthor;
 	private final ProductService productService;
 	Logger logger = LoggerFactory.getLogger(ProductController.class);
 
@@ -125,11 +121,4 @@ public class ProductController {
 				+ updatedProduct.toString());
 		return "update";
 	}
-
-	@ExceptionHandler
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public ErrorResponse handlerException(Exception e) {
-        return new ErrorResponse(e.getLocalizedMessage(),
-                nameOfAuthor, LocalDateTime.now(), e.getStackTrace());
-    }
 }
