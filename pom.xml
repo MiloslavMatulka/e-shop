@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.engeto</groupId>
 	<artifactId>e-shop</artifactId>
-	<version>1.4.1</version>
+	<version>1.5.0</version>
 	<name>e-shop</name>
 	<description>Product management web app</description>
 	<properties>
@@ -34,7 +34,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
-			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
